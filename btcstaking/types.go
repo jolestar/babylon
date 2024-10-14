@@ -136,7 +136,6 @@ func newTaprootScriptHolder(
 
 		tapLeaf := txscript.NewBaseTapLeaf(script)
 		leafHash := tapLeaf.TapHash()
-
 		if _, ok := createdLeafs[leafHash]; ok {
 			return nil, fmt.Errorf("duplicate script in provided scripts")
 		}
